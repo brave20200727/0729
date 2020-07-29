@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="debug">...</div>
+
+    <script>
+        var person = {
+            firstName: "Jeremy",
+            lastName: "Lin",
+            height: 190,
+            sayHello: function(){
+                return "Hello I'm " + this.firstName;
+            }
+        }
+        debug.innerText = person.sayHello();
+    </script>
+</body>
+</html>
