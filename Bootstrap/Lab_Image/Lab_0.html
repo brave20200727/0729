@@ -18,7 +18,27 @@
         <div class="page-header"><h2>哪一隻是貓?</h2></div>
 
 
-
+        <div class="row">
+            <div class="col-4"> 
+                <img id="imgDog"
+                src="images/dog.jpeg"
+                class="pet img-fluid rounded-circle img-thumbnail"
+                data-species="狗" />
+            </div>
+            <div class="col-4"> 
+                <img id="imgCat"
+                src="images/cat.jpeg"
+                class="pet img-fluid rounded-circle img-thumbnail"
+                data-species="貓" />
+            </div>
+            <div class="col-4"> 
+                <img id="imgRabbit"
+                src="images/rabbit.jpeg"
+                class="pet img-fluid rounded-circle img-thumbnail"
+                data-species="兔子" />
+            </div>
+        </div>
+        
 
 
         
@@ -28,7 +48,7 @@
     </div> <!-- end of container -->
 
 
-<img id="imgDog"
+<!-- <img id="imgDog"
     src="images/dog.jpeg"
     class=" "
     data-species="狗" />
@@ -41,7 +61,7 @@
 <img id="imgRabbit"
     src="images/rabbit.jpeg"
     class=" "
-    data-species="兔子" />
+    data-species="兔子" /> -->
 
     <script>
 
@@ -81,7 +101,7 @@
             // 請接著寫作
             // Lab 程式:
         
-            var speciesList = ["狗狗", "貓", "兔兔"];
+            var speciesList = ["狗", "貓", "兔子"];
             $(".pet").each(function (key, obj) {
                 $(obj).data("species", speciesList[key]);
             })
@@ -95,7 +115,7 @@
                     $(this).fadeOut("fast");
                 }
                 else {
-                    showToast("Note", "答對了! XD");
+                    showToast("Note", "恭喜答對了！");
                     $(".pet").not("img[data-species='貓']").fadeTo("fast", 0.50);
                     $(".pet").off("mouseenter").off("mouseleave").off("click");
                 }
