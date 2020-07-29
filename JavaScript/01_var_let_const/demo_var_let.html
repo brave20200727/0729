@@ -26,9 +26,16 @@
             for (let i = 1; i <= 3; i++) {
                 alert(i);
             }
-            // alert(i);
+            // alert(i); // Uncaught ReferenceError: i is not defined
 
             data = x;
+
+            var num1 = 100;
+            var num2 = 200;
+            alert("num1 = " + num1 + " num2 = " + num2);
+            [num1, num2] = [num2, num1];
+            alert("num1 = " + num1 + " num2 = " + num2);
+
         }
         
         test();

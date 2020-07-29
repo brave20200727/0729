@@ -7,10 +7,18 @@
     <div id="debug"></div>
     <script>
     
-        // function test (a) {
-        //     return a + 1;
+        // test(); // 可以正常呼叫
+        // function test () {
+        //     alert(Date());
         // }
-        
+        // test(); // 正常
+
+        // test(); // Uncaught TypeError: test is not a function
+        // var test = function () {
+        //     alert("Hello World!");
+        // }
+        // test();
+
         // var test = function (a) {
         //     return a + 1;
         // }
@@ -20,11 +28,11 @@
         // }        
 
         // var test = (a) => { return a + 1; }    
-        var test = (a) => a + 1;    
+        // var test = (a) => a + 1;    
         
-        var answer = test(5);
+        // var answer = test(5);
         
-        alert(answer);
+        // alert(answer);
         
     </script>
 </body>
