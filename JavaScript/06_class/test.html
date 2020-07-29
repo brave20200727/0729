@@ -9,15 +9,23 @@
     <div id="debug">...</div>
 
     <script>
-        var person = {
-            firstName: "Jeremy",
-            lastName: "Lin",
-            height: 190,
-            sayHello: function(){
-                return "Hello I'm " + this.firstName;
-            }
-        }
-        debug.innerText = person.sayHello();
+        // var person = {
+        //     firstName: "Jeremy",
+        //     lastName: "Lin",
+        //     height: 190,
+        //     sayHello: function(){
+        //         return "Hello I'm " + this.firstName;
+        //     }
+        // }
+        var playerList = [
+            { name: "Jeter", number: 2},
+            { name: "Lin", number: 7},
+            { name: "Wang", number: 40}
+        ]
+        var s = JSON.stringify(playerList);
+        var s2 = '[{"name":"Jeter","number":2},{"name":"Lin","number":7},{"name":"Wang","number":40}]';
+        var dataList2 = JSON.parse(s2);
+        debug.innerText = dataList2[0].name;
     </script>
 </body>
 </html>
