@@ -6,18 +6,22 @@
 <body>
     <div id="debug"></div>
     <script>
+        // alert(dataY); // Uncaught ReferenceError: Cannot access 'dataY' before initialization
+        let dataY = 100;
         var data = 3;
+        // alert(data); // 測試data值
         // .. ....
         var data = 33;
+        // alert(data); // 測試data值
         
         function test() {
             let x = 100;
-            // let x = 101; // Syntax error
+            // let x = 101; // Uncaught SyntaxError: Identifier 'x' has already been declared
             if (x > 0) {
                 let y = x;
                 alert(y);
             }
-            // alert(y); // error
+            // alert(y); // Uncaught ReferenceError: y is not defined
             
             for (let i = 1; i <= 3; i++) {
                 alert(i);
