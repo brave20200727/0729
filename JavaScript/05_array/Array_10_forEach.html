@@ -25,8 +25,14 @@ test.onclick = function () {
     var sum = 0;
 
     // 你的任務程式...
+    // for(let i = 0; i < data.length; i++) {
+    //     sum = sum + i;
+    // }
     
-    
+    data.forEach(function (x) {
+        console.log(x);
+        sum += x;
+    });
     
 
     report.innerText = sum;
